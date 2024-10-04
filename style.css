@@ -1,0 +1,54 @@
+/* Style pour le conteneur principal qui contient la grille */
+.grid-wrapper {
+    display: flex;
+    justify-content: center;  /* Centre horizontalement */
+    align-items: center;      /* Centre verticalement */
+    margin-top: 20px;
+    height: calc(100vh - 100px);
+}
+
+/* Style pour le conteneur de la grille */
+.grid {
+    display: grid;
+    gap: 1px;
+}
+
+/* Cellules de la grille */
+.grid-item {
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+/* Cellules de mur */
+.wall {
+    background-color: grey;
+}
+
+/* Cellule de départ */
+.start {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+
+/* Cellule d'arrivée */
+.goal {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+/* Cellules de coordonnées */
+.coord-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ddd;
+    font-weight: bold;
+}
+
+/* Limiter la largeur et la hauteur maximales */
+.grid {
+    max-width: 1000px;  /* Ajuste cette valeur selon tes besoins */
+    max-height: 1000px; /* Ajuste cette valeur selon tes besoins */
+}
