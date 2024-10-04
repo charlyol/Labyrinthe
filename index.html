@@ -4,19 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grille Aléatoire</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="controls">
-        <label for="rows">Lignes (y) :</label>
-        <input type="number" id="rows" value="6" min="1">
-        <label for="cols">Colonnes (x) :</label>
-        <input type="number" id="cols" value="7" min="1">
-        <button id="generate">Générer un nouveau circuit</button>
+    <div class="container text-center my-4">
+        <div class="controls mb-4">
+            <label for="rows">Lignes (y) :</label>
+            <input type="number" id="rows" class="form-control d-inline-block w-auto" value="6" min="1">
+            <label for="cols">Colonnes (x) :</label>
+            <input type="number" id="cols" class="form-control d-inline-block w-auto" value="7" min="1">
+            <button id="generate" class="btn btn-primary">Générer un nouveau circuit</button>
+        </div>
     </div>
 
     <div id="grid-container" class="grid-wrapper"></div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="Cell.js"></script>
     <script src="Grid.js"></script>
     <script src="main.js"></script>

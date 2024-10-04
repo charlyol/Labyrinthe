@@ -1,32 +1,30 @@
 /* Style pour le corps de la page */
 body {
-    margin: 10;  /* Élimine les marges par défaut */
-    height: 100vh; /* Assure que le corps occupe toute la hauteur de la fenêtre */
-    display: flex; /* Utilise flexbox pour centrer */
-    flex-direction: column; /* Dispose les éléments en colonne */
-    align-items: center; /* Centre horizontalement */
-}
-
-/* Style pour la section des contrôles */
-.controls {
-    margin-bottom: 50px; /* Ajoute de l'espace entre les contrôles et la grille */
+    margin: 0;  
+    height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    background-image: url('Pictures/background.jpg'); 
+    background-size: cover; 
+    background-position: center; 
 }
 
 /* Style pour le conteneur principal qui contient la grille */
 .grid-wrapper {
     display: flex;
-    justify-content: center;  /* Centre horizontalement */
-    align-items: center;      /* Centre verticalement */
+    justify-content: center;  
+    align-items: center;      
 }
 
 /* Style pour le conteneur de la grille */
 .grid {
     display: grid;
     gap: 1px;
-    width: 100%;    /* Permet à la grille de remplir toute la largeur */
-    height: 100%;   /* Permet à la grille de remplir toute la hauteur */
-    max-width: 800px; /* Ajuste la largeur maximale selon tes besoins */
-    max-height: 800px; /* Ajuste la hauteur maximale selon tes besoins */
+    width: 100%;    
+    height: 100%;   
+    max-width: 800px; 
+    max-height: 800px; 
 }
 
 /* Cellules de la grille */
