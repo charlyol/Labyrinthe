@@ -7,10 +7,15 @@ class Cell {
         this.element = document.createElement('div');
         this.element.classList.add('grid-item');
 
+        // Affecter une image en fonction de la traversabilité
         if (!traversable) {
             this.element.classList.add('wall');
+            this.element.style.backgroundImage = "url('Pictures/Mur.jpg')"; // Image des murs
+        } else {
+            this.element.style.backgroundImage = "url('Pictures/Chemin.png')"; // Image des chemins
         }
 
+        this.element.style.backgroundSize = 'cover'; // Couvrir toute la cellule
         this.element.setAttribute('data-x', x);
         this.element.setAttribute('data-y', y);
     }
@@ -24,11 +29,13 @@ class Cell {
 
     setStart() {
         this.element.classList.add('start');
+        this.element.style.backgroundImage = "url('Pictures/Start.jpg')"; 
         this.element.innerText = 'S';
     }
 
     setGoal() {
         this.element.classList.add('goal');
-        this.element.innerText = 'G';
+        this.element.style.backgroundImage = "url('Pictures/Goal.png')"; 
+        this.element.innerText = 'Finish';
     }
 }

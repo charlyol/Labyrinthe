@@ -33,48 +33,50 @@ class Grid {
     render() {
         const gridContainer = document.getElementById('grid-container');
         gridContainer.innerHTML = '';
-
-        // Conteneur principal avec coordonnées x et y intégrées
+    
+        // Conteneur principal pour la grille
         const fullGrid = document.createElement('div');
         fullGrid.classList.add('grid');
-
+    
         // Ajuster le style pour la taille des cellules
-        fullGrid.style.gridTemplateColumns = `repeat(${this.cols + 1}, ${this.cellSize}px)`;
-        fullGrid.style.gridTemplateRows = `repeat(${this.rows + 1}, ${this.cellSize}px)`;
-
+        fullGrid.style.gridTemplateColumns = `repeat(${this.cols + 1}, ${this.cellSize}px)`; // Inclure la cellule vide
+        fullGrid.style.gridTemplateRows = `repeat(${this.rows + 1}, ${this.cellSize}px)`; // Inclure la cellule vide
+    
         // Première cellule vide dans le coin supérieur gauche
         const emptyCorner = document.createElement('div');
         emptyCorner.classList.add('coord-cell');
         emptyCorner.style.width = `${this.cellSize}px`;
         emptyCorner.style.height = `${this.cellSize}px`;
+        emptyCorner.style.backgroundImage = "url('Pictures/your-image.png')"; // Remplacer par le chemin de ton image
+        emptyCorner.style.backgroundSize = 'cover'; // Couvrir toute la cellule
         fullGrid.appendChild(emptyCorner);
-
+    
         // Coordonnées x sur la première ligne
         for (let x = 0; x < this.cols; x++) {
             const xCoordCell = document.createElement('div');
             xCoordCell.classList.add('coord-cell');
-            xCoordCell.textContent = x;
+            xCoordCell.textContent = x; // Ajouter l'indice de colonne ici, si nécessaire
             xCoordCell.style.width = `${this.cellSize}px`;
             xCoordCell.style.height = `${this.cellSize}px`;
             fullGrid.appendChild(xCoordCell);
         }
-
+    
         // Remplissage de la grille principale avec coordonnées y
         for (let y = 0; y < this.rows; y++) {
             // Première colonne (coordonnée y)
             const yCoordCell = document.createElement('div');
             yCoordCell.classList.add('coord-cell');
-            yCoordCell.textContent = y;
+            yCoordCell.textContent = y; // Ajouter l'indice de ligne ici, si nécessaire
             yCoordCell.style.width = `${this.cellSize}px`;
             yCoordCell.style.height = `${this.cellSize}px`;
             fullGrid.appendChild(yCoordCell);
-
+    
             // Rendu des cellules de la grille
             for (let x = 0; x < this.cols; x++) {
                 this.grid[y][x].render(fullGrid, this.cellSize);
             }
         }
-
+    
         // Ajouter la grille complète au conteneur
         gridContainer.appendChild(fullGrid);
     }

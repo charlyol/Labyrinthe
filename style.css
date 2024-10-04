@@ -20,17 +20,18 @@ body {
 /* Style pour le conteneur de la grille */
 .grid {
     display: grid;
-    gap: 1px;
+    gap: 0px;
     width: 100%;    
     height: 100%;   
     max-width: 800px; 
     max-height: 800px; 
+    border: 5px solid #000000;
 }
 
 /* Cellules de la grille */
 .grid-item {
     background-color: white;
-    border: 1px solid #ccc;
+    border: 1px solid #8a8a8a;
 }
 
 /* Cellules de mur */
@@ -41,14 +42,14 @@ body {
 /* Cellule de départ */
 .start {
     background-color: green;
-    color: white;
+    color: rgb(255, 0, 0);
     font-weight: bold;
 }
 
 /* Cellule d'arrivée */
 .goal {
     background-color: red;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
 }
 
